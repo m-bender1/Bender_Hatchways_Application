@@ -1,0 +1,143 @@
+/* 
+	Matthew Bender 
+	October 2021
+	Hatchways Assessment, main CSS file
+*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600;700&display=swap');
+
+:root {
+	--dark-grey: #808080;
+	--grey-clr: #CECECE;
+	--white-clr: #F8F8FF;
+	--black-clr: #1D1D1C;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+	overflow-y: hidden;
+	background-color: var(--grey-clr);
+	box-sizing: border-box;
+}
+
+img {
+	border: thin solid var(--grey-clr);
+	border-radius: 50%;
+	transform: scale(200%);
+	justify-self: center;
+}
+
+.studentDataOutput {
+	position: absolute; /* absolute positioning center to allow the body scrollbar to hide and the div itself to scroll */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 85%;
+	width: 60%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: var(--white-clr);
+	border: 1px solid var(--grey-clr);
+	border-radius: 0.5rem;
+	filter: drop-shadow(0 .1rem .5rem #808080);
+}
+
+.studentDiv {
+	padding: 1rem 1.5rem;
+	border-bottom: thin solid var(--grey-clr);
+	display: grid;
+	grid-template-columns: 30% 65% 5%;
+	align-items: center;
+}
+
+	.studentDiv div > p {
+		margin: 0;
+		padding: 0.1rem;
+	}
+
+.searchNames {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: auto;
+	width: 100%;
+}
+
+.filterInput, .studentTagInput {
+	font-family: inherit;
+	width: 100%;
+	border: 0;
+	border-bottom: 2px solid var(--grey-clr);
+	outline: 0;
+	font-size: 1.3rem;
+	color: var(--grey-clr);
+	padding: .5rem .5rem;
+	background: transparent;
+}
+
+.studentTagInput {
+	width: 35%;
+	padding-left: 0;
+	font-size: 1rem;
+	color: var(--dark-grey);
+}
+
+/* expand button */
+.expandBtn {
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	font-size: 2rem;
+	color: var(--dark-grey);
+	align-self: start;
+	margin-top: 1rem;
+}
+
+
+.gradesList {
+	display: none;
+	list-style: none;
+	counter-reset: listItems; /* start the counter (starts @ 1) */
+	padding: 0;
+}
+
+/* this replaces the bullet points with "test 1, test 2, etc */
+li::before {
+	counter-increment: listItems; /* increment the  ounter */
+	content: "Test " counter(listItems) ":";
+	margin-right: 1rem;
+}
+
+/* tag styling */
+.studentTagOutput {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 0.5rem 0.5rem;
+	padding: 0.5rem 0;
+}
+
+	.studentTagOutput > span {
+		background: var(--grey-clr);
+		color: var(--black-clr);
+		border: none;
+		border-radius: 3px;
+		padding: 0.2rem;
+		width: auto;
+		text-align: center;
+	}
+
+
+/* these will hide the scrollbar */
+.studentDataOutput::-webkit-scrollbar {
+	display: none;
+}
+
+.studentDataOutput {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox -> VS is saying it's not a css property, but the scrollbar doesn't hide without it */
+}
+/* end hide scroll bar */

@@ -1,0 +1,3 @@
+D:\Users\Bender_Hatchways\obj\Debug\Bender_Hatchways.njsprojAssemblyReference.cache
+D:\Users\Bender_Hatchways\obj\Debug\Bender_Hatchways.njsproj.CoreCompileInputs.cache
+D:\Users\Bender_Hatchways\bin\Microsoft.NodejsTools.WebRole.dll
