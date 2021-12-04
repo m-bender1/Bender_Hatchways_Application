@@ -9,7 +9,11 @@ const app = express()
 var path = require("path")
 // load the add-in xmlhttprequest and create XMLHttpRequest object
 let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest
-const port = 3000
+const { PORT=3000, LOCAL_ADDRESS='0.0.0.0' } = process.env
+server.listen(PORT, LOCAL_ADDRESS, () => {
+  const address = server.address();
+  console.log('server listening at', address);
+});
 
 app.use("/", express.static("public"))
 //server default page on http://localhost:3000/
