@@ -2,7 +2,6 @@
   "name": "bender_hatchways",
   "version": "0.0.0",
   "description": "Bender_Hatchways",
-  "main": "server.js",
   "scripts": {
     "start": "npm init server.js"
   },
