@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Bender_Hatchways",
   "scripts": {
-    "start": "node.js server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
