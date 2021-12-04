@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "Bender_Hatchways",
   "main": "server.js",
-  "author": {
-    "name": ""
+  "scripts": {
+    "start": "npm init server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
