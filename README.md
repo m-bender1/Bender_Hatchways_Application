@@ -4,7 +4,7 @@
 
 ### Built with Node.JS(JavaScript), jQuery, HTML/CSS
 
-### Time to complete: approx. 7-9 hours
+### Time to complete: approx. 6 hrs.
 
 ### To run:
 - Save in location of choice
